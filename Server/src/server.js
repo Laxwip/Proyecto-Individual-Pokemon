@@ -8,16 +8,11 @@ const server = express();
 /*
   Importacion de conjuntos de rutas
 */
-const PersonajeRoutes = require('./routes/character');
+const PokemonRoutes = require("./routes/pokemons");
 
 /*
   Usamos los conjuntos de rutas importados
 */ 
-server.use("/personajes", PersonajeRoutes)
-
-
-server.get("/", (req, res) => {
-  res.send("Mensaje de home")
-})
+server.use("/pokemon", PokemonRoutes)
 
 module.exports = server;
