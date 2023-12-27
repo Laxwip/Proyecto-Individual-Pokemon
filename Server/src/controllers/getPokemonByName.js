@@ -37,8 +37,6 @@ module.exports = async (req, res) => {
     }
 
     res.status(200).json(responses);
-
-    // res.status(200).json(pokemonApi)
   } catch (error) {
     if (error.response && error.response.status === 404) {
       // Manejar el caso específico de error 404 de la API
